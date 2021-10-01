@@ -15,6 +15,7 @@ $min-height: 100vh !default;
 
 :root {
     font-family: "Poppins", sans-serif;
+    font-size: 14px;
 }
 
 html,
@@ -22,8 +23,8 @@ body {
     margin: 0;
     padding: 0;
 
-    color: #606060;
-    background-color: lighten($color-base, 65);
+    color: $color-texto;
+    background-color: darken(white, 4);
 }
 
 body {
@@ -156,53 +157,5 @@ code {
         border-top: 0;
         border-bottom: 1px solid;
         height: 0;
-    }
-}
-
-.copyright {
-    min-height: 60px;
-    display: flex;
-    align-items: center;
-}
-
-// Desarrollador
-.developer {
-    position: relative;
-    min-height: 30px;
-
-    &--link {
-        text-decoration: none;
-        color: lighten(#0080d4, 40);
-        outline: medium none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
-
-.padding {
-    --padding: 5px;
-
-    &--left {
-        padding-left: var(--padding);
-    }
-
-    &--right {
-        padding-right: var(--padding);
-    }
-
-    &--horizontal {
-        padding-left: var(--padding);
-        padding-right: var(--padding);
-    }
-
-    &--vertical {
-        padding-top: var(--padding);
-        padding-bottom: var(--padding);
-    }
-
-    &--all {
-        padding: var(--padding);
     }
 }

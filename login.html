@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pronatel - Vistas</title>
+  <title>Pronatel - Login</title>
 
   <!-- Protocolo OpenGraph -->
 
-  <meta property="og:title" content="Vistas - Login" />
+  <meta property="og:title" content="Pronatel - Login" />
   <meta property="og:type" content="website" />
 
   <!--
@@ -34,7 +34,37 @@
 </head>
 
 <body>
-  <main id="app">
+  <main id="app" class="main main--login">
+    <div class="login">
+      <form action="" method="POST" class="login__form">
+        <label for="user" class="login__text">
+          <input type="text" name="user" id="user" placeholder="Nombre de usuario">
+        </label>
+
+        <label for="password" class="login__text">
+          <input type="password" name="password" id="password" placeholder="Contraseña">
+        </label>
+
+        <p class="login__info text text--right">
+          <a href="#" class="login__enlace">¿Olvidó su nombre de usuario o contraseña?</a>
+        </p>
+
+        <button type="submit" class="button button--primary login__button">
+          Acceder
+        </button>
+
+        <div class="login__recordar">
+          <div class="toggle-button"></div>
+          <p>Recardar nombre de usuario</p>
+        </div>
+
+        <hr>
+
+        <p class="text text--center">Algunos cursos permiten el acceso de invitados</p>
+
+        <button type="button" class="button login--button">Iniciar sesión como invitado</button>
+      </form>
+    </div>
 
     <script src="app/js/main.js" type="module"></script>
   </main>

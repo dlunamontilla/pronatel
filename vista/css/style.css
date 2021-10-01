@@ -4,14 +4,15 @@
 
 :root {
   font-family: "Poppins", sans-serif;
+  font-size: 14px;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  color: #606060;
-  background-color: white;
+  color: #424242;
+  background-color: whitesmoke;
 }
 
 body {
@@ -116,128 +117,124 @@ code {
   height: 0;
 }
 
-.copyright {
-  min-height: 60px;
+.login {
+  --gap: 10px;
+  border: 1px solid #326ed4;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-
-.developer {
+.login__form {
+  padding: 70px 50px;
+  width: calc(100% - 20px);
+  max-width: 450px;
+  background-color: #fcfcfc;
+  border: 1px solid white;
+}
+.login__text {
+  display: block;
   position: relative;
-  min-height: 30px;
+  height: 45px;
 }
-.developer--link {
-  text-decoration: none;
-  color: #a1daff;
+.login__text:not(:last-of-type) {
+  margin-bottom: var(--gap);
+}
+.login__text [type="text"],
+.login__text [type="password"] {
+  display: block;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  font: inherit;
+  padding: 0 10px;
   outline: medium none;
+  background-image: none;
+  background-color: transparent;
+  border: 1px solid #cccccc;
 }
-.developer--link:hover {
-  text-decoration: underline;
+.login__text [type="text"]:focus,
+.login__text [type="password"]:focus {
+  border-color: #326ed4;
 }
-
-.padding {
-  --padding: 5px;
+.login__info {
+  font-size: 0.9rem;
 }
-.padding--left {
-  padding-left: var(--padding);
+.login__enlace {
+  color: #737373;
 }
-.padding--right {
-  padding-right: var(--padding);
-}
-.padding--horizontal {
-  padding-left: var(--padding);
-  padding-right: var(--padding);
-}
-.padding--vertical {
-  padding-top: var(--padding);
-  padding-bottom: var(--padding);
-}
-.padding--all {
-  padding: var(--padding);
+.login__recordar {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.frontal {
-  --color: #4d4d4d;
+.button {
+  --border-color: #b3b3b3;
+  --color: #424242;
+  font: inherit;
+  padding: 0 10px;
+  min-width: 100%;
+  min-height: 45px;
+  background-color: var(--fondo);
+  border: 1px solid var(--border-color);
   color: var(--color);
-}
-.frontal, .frontal path {
+  border-radius: 4px;
   transition: 300ms ease;
 }
-.frontal path {
-  fill: var(--color);
+.button:hover {
+  opacity: 0.85;
 }
-.frontal--base, .frontal--base-hover:hover {
-  --color: #326ed4;
+.button:active {
+  opacity: 1;
+  transition: none;
 }
-.frontal--secundario, .frontal--secundario-hover:hover {
-  --color: #3e4990;
-}
-.frontal--whatsapp, .frontal--whatsapp-hover:hover {
-  --color: #00e676;
-}
-.frontal--whatsapp path, .frontal--whatsapp-hover:hover path {
-  fill: var(--color);
-}
-.frontal--facebook, .frontal--facebook-hover:hover {
-  --color: #1877f2;
-}
-.frontal--instagram, .frontal--instagram-hover:hover {
-  --color: #c82767;
-}
-.frontal--twitter, .frontal--twitter-hover:hover {
-  --color: #1da1f2;
-}
-.frontal--youtube, .frontal--youtube-hover:hover {
-  --color: #ff0000;
-}
-.frontal--pinterest, .frontal--pinterest-hover:hover {
-  --color: #cb2027;
-}
-.frontal--linkedin, .frontal--linkedin-hover:hover {
-  --color: #0b66c3;
-}
-.frontal--skype, .frontal--skype-hover:hover {
-  --color: #00aff0;
+.button--primary {
+  --fondo: #326ed4;
+  --border-color: transparent;
+  --color: white;
 }
 
-.fondo {
-  --color: #4d4d4d;
+.toggle-button {
+  --size: 35px;
+  --diferencia: 1.7;
+  border: 1px solid #cccccc;
+  width: var(--size);
+  height: calc(var(--size) / var(--diferencia));
+  border-radius: calc(var(--size) / 2);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
   transition: 300ms ease;
-  background-color: var(--color);
-  fill: var(--color);
 }
-.fondo--base, .fondo--base-hover:hover {
-  --color: #326ed4;
+.toggle-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  margin: auto;
+  left: 2px;
+  top: 0;
+  bottom: 0;
+  border-radius: 50%;
+  width: calc(var(--size) / 2 - 2px);
+  height: calc(var(--size) / 2 - 2px);
+  transition: 300ms ease left;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-.fondo--secundario, .fondo--secundario-hover:hover {
-  --color: #3e4990;
+.toggle-button--activo {
+  border: 1px solid #326ed4;
 }
-.fondo--whatsapp, .fondo--whatsapp-hover:hover {
-  --color: #00e676;
-}
-.fondo--facebook, .fondo--facebook-hover:hover {
-  --color: #1877f2;
-}
-.fondo--instagram, .fondo--instagram-hover:hover {
-  --color: #c82767;
-}
-.fondo--twitter, .fondo--twitter-hover:hover {
-  --color: #1da1f2;
-}
-.fondo--youtube, .fondo--youtube-hover:hover {
-  --color: #ff0000;
-}
-.fondo--pinterest, .fondo--pinterest-hover:hover {
-  --color: #cb2027;
-}
-.fondo--linkedin, .fondo--linkedin-hover:hover {
-  --color: #0b66c3;
-}
-.fondo--skype, .fondo--skype-hover:hover {
-  --color: #00aff0;
-}
-.fondo--blanco, .fondo--blanco-hover:hover {
-  --color: white;
+.toggle-button--activo::before {
+  left: calc(100% - calc(var(--size) / 2 - 1px));
+  background-color: #326ed4;
 }
 
 /*# sourceMappingURL=style.css.map */
