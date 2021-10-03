@@ -18,8 +18,8 @@
   -->
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="multimedia/favicon/favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="multimedia/favicon/favicon.png" type="image/png" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="favicon.png" type="image/png" />
 
   <!-- Fuentes tipográficas -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,15 +30,15 @@
 
   <!-- Estilos -->
   <link rel="stylesheet" href="vista/css/style.css" />
-
 </head>
 
 <body>
   <main id="app" class="main main--login">
+
     <div class="login">
       <form action="" method="POST" class="login__form">
         <label for="user" class="login__text">
-          <input type="text" name="user" id="user" placeholder="Nombre de usuario">
+          <input type="text" name="user" id="user" autofocus="" placeholder="Nombre de usuario">
         </label>
 
         <label for="password" class="login__text">
@@ -49,25 +49,26 @@
           <a href="#" class="login__enlace">¿Olvidó su nombre de usuario o contraseña?</a>
         </p>
 
-        <button type="submit" class="button button--primary login__button">
+        <button type="submit" class="button button--primary login__button" data-display="flex">
           Acceder
         </button>
 
         <div class="login__recordar">
-          <div class="toggle-button"></div>
-          <p>Recardar nombre de usuario</p>
+          <div class="toggle-button" tabindex="0"></div>
+          <p>Recordar nombre de usuario</p>
         </div>
 
         <hr>
 
         <p class="text text--center text--bold text--small">Algunos cursos permiten el acceso de invitados</p>
 
-        <button type="button" class="button login--button">Iniciar sesión como invitado</button>
+        <button type="button" class="[ button button--default ] login--button" data-display="flex">Iniciar sesión como
+          invitado</button>
       </form>
     </div>
-
-    <script src="app/js/main.js" type="module"></script>
   </main>
+
+  <script src="app/js/main.js" type="module"></script>
 </body>
 
 </html>
