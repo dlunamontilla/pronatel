@@ -2,87 +2,93 @@
 <html lang="es-VE" prefix="og: https://ogp.me/ns#">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pronatel - Home</title>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Pronatel - Home</title>
 
-  <!-- Protocolo OpenGraph -->
+   <!-- Protocolo OpenGraph -->
 
-  <meta property="og:title" content="Home - Login" />
-  <meta property="og:type" content="website" />
+   <meta property="og:title" content="Home - Login" />
+   <meta property="og:type" content="website" />
 
-  <!--
-  <meta property="og:url" content="https://ejemplo.com/">
-  <meta property="og:image" content="https://ejemplo.com/imagen.jpeg" />
-  <meta property="og:video" content="https://example.com/video" />
-  -->
+   <!--
+   <meta property="og:url" content="https://ejemplo.com/">
+   <meta property="og:image" content="https://ejemplo.com/imagen.jpeg" />
+   <meta property="og:video" content="https://example.com/video" />
+   -->
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="favicon.png" type="image/png" />
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+   <link rel="icon" href="favicon.png" type="image/png" />
 
-  <!-- Fuentes tipográficas -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+   <!-- Fuentes tipográficas -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="vista/css/style.css" />
+   <!-- Estilos -->
+   <link rel="stylesheet" href="vista/css/style.css" />
 
-  <!-- Plugins -->
-  <script src="app/js/plugins/splide.min.js"></script>
+   <!-- Plugins -->
+   <script src="app/js/plugins/splide.min.js"></script>
 </head>
 
 <body>
-  <main id="app">
-    <div class="header">
-      <nav class="navigation">
-        <!-- Left -->
-        <div class="navigation__item">
-          <div class="logo">
-            <img src="multimedia/pronatel.png" alt="Pronatel">
-          </div>
+   <main id="app">
+      <div class="header">
+         <nav class="navigation">
+            <!-- Left -->
+            <div class="navigation__item">
+               <div class="logo">
+                  <img src="multimedia/pronatel.png" alt="Pronatel">
+               </div>
 
-          <ul class="menu">
-            <ul class="menu__item"><a href="#" class="menu__enlace">Inicio</a></ul>
-            <ul class="menu__item"><a href="#" class="menu__enlace">Comunicados</a></ul>
-            <ul class="menu__item"><a href="#" class="menu__enlace">Programas</a></ul>
-            <ul class="menu__item"><a href="#" class="menu__enlace">Archivos</a></ul>
-          </ul>
-        </div>
+               <ul class="menu">
+                  <ul class="menu__item"><a href="#" class="menu__enlace">Inicio</a></ul>
+                  <ul class="menu__item"><a href="#" class="menu__enlace">Comunicados</a></ul>
+                  <ul class="menu__item"><a href="#" class="menu__enlace">Programas</a></ul>
+                  <ul class="menu__item"><a href="#" class="menu__enlace">Archivos</a></ul>
+               </ul>
+            </div>
 
-        <!-- Right -->
-        <div class="navigation__item">
-          <div class="search">
-            <form action="#" class="search__form" method="GET">
-              <div class="search__text">
-                <input type="text" name="q" id="q" placeholder="Buscar...">
-                <button type="submit" class="[ button button--primary ] search__button"
-                  data-svg="multimedia/icons/buscar.svg"></button>
-              </div>
-            </form>
-          </div>
+            <!-- Right -->
+            <div class="navigation__item">
+               <div class="search">
+                  <form action="#" class="search__form" method="GET">
+                     <div class="search__text">
+                        <input type="text" name="q" id="q" placeholder="Buscar...">
+                        <button type="submit" class="[ button button--primary ] search__button"
+                           data-svg="multimedia/icons/buscar.svg"></button>
+                     </div>
+                  </form>
+               </div>
 
-          <div class="navigation__separator"></div>
+               <div class="navigation__separator"></div>
 
-          <a href="#" class="button button--primary">
-            <span>Acceder</span>
-            <span data-svg="multimedia/icons/salir.svg"></span>
-          </a>
-        </div>
-      </nav>
+               <a href="#" class="button button--primary">
+                  <span>Acceder</span>
+                  <span data-svg="multimedia/icons/salir.svg"></span>
+               </a>
+            </div>
+         </nav>
 
-      <div class="banner">
-        <div class="splide" id="imagen-splide">
-
-        </div>
+         <div class="banner">
+            <div class="splide" id="splide-images">
+               <div class="splide__track">
+                  <ul class="splide__list">
+                     <li class="splide__slide">Slide 01</li>
+                     <li class="splide__slide">Slide 02</li>
+                     <li class="splide__slide">Slide 03</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-  </main>
+   </main>
 
-  <script src="app/js/main.js" type="module"></script>
+   <script src="app/js/main.js" type="module"></script>
 </body>
 
 </html>

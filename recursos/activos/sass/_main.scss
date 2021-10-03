@@ -88,3 +88,13 @@
 .logo {
     margin-right: var(--gap);
 }
+
+.banner {
+    margin: 0 auto;
+    width: $width;
+    max-width: $max-width;
+
+    // Color temporal:
+    background-color: darken(white, 20);
+    min-height: 100px;
+}

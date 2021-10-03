@@ -184,6 +184,14 @@ code {
   margin-right: var(--gap);
 }
 
+.banner {
+  margin: 0 auto;
+  width: calc(100% - 20px);
+  max-width: 1200px;
+  background-color: #cccccc;
+  min-height: 100px;
+}
+
 .button {
   --border-color: #b3b3b3;
   --color: #424242;
@@ -456,9 +464,43 @@ code {
   box-shadow: 0 0 5px rgba(50, 110, 212, 0.5);
 }
 
+.splide {
+  --icons-size: 20px;
+  overflow: hidden;
+  position: relative;
+}
 .splide__list {
   display: flex;
   list-style: none;
+  overflow: hidden;
+}
+.splide__arrow {
+  --color: white;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  height: 100px;
+  width: 35px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--color);
+  border: 0;
+}
+.splide__arrow svg {
+  width: var(--icons-size);
+  height: var(--icons-size);
+}
+.splide__arrow path {
+  fill: var(--color);
+}
+.splide__arrow--prev {
+  transform: rotateY(180deg);
+  left: 0;
+  right: auto;
+}
+.splide__arrow--next {
+  left: auto;
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

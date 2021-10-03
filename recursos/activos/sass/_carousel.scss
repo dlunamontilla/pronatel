@@ -1,6 +1,47 @@
 .splide {
+    --icons-size: 20px;
+
+    overflow: hidden;
+    position: relative;
+
     &__list {
         display: flex;
         list-style: none;
+        overflow: hidden;
+    }
+
+    // Flechas:
+    &__arrow {
+        --color: white;
+
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        height: 100px;
+        width: 35px;
+        background-color: rgba(black, 0.8);
+        color: var(--color);
+        border: 0;
+
+        svg {
+            width: var(--icons-size);
+            height: var(--icons-size);
+        }
+
+        path {
+            fill: var(--color);
+        }
+
+        &--prev {
+            transform: rotateY(180deg);
+            left: 0;
+            right: auto;
+        }
+
+        &--next {
+            left: auto;
+            right: 0;
+        }
     }
 }
