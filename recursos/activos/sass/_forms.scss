@@ -1,10 +1,12 @@
 .button {
     --border-color: #{darken(white, 30)};
     --color: #{$color-texto};
+    --gap: 5px;
+    --icons-size: 20px;
 
     font: inherit;
     padding: 0 10px;
-    min-height: 45px;
+    min-height: 37px;
 
     background-color: var(--fondo);
     border: 1px solid var(--border-color);
@@ -35,6 +37,22 @@
         --color: #{$color-texto};
         --fondo: #{darken(white, 7)};
         --border-color: #{darken(white, 20)};
+    }
+
+    svg {
+        width: var(--icons-size);
+        height: var(--icons-size);
+        display: flex;
+    }
+
+    path {
+        fill: var(--color);
+    }
+
+    span {
+        &:not(:first-of-type) {
+            margin-left: var(--gap);
+        }
     }
 
     &--default {
@@ -75,6 +93,10 @@
         --fondo: #{$color};
         --border-color: transparent;
         --color: white;
+
+        svg {
+            --color: #{rgba(white, 0.3)};
+        }
 
         &:focus {
             --fondo: #{darken($color-base, 7)};
@@ -147,7 +169,7 @@
     }
 
     &__button {
-        --diametro: 25px;
+        --diametro: 20px;
         --border: 4px;
 
         position: absolute;
@@ -157,7 +179,18 @@
         top: 0;
         bottom: 0;
         width: var(--width-button);
+        border-radius: 0 5px 5px 0;
+
         z-index: 1;
+
+        svg {
+            width: var(--diametro);
+            height: var(--diametro);
+        }
+
+        path {
+            fill: white;
+        }
     }
 }
 
@@ -250,6 +283,7 @@
 
     &__button {
         display: flex;
+        min-height: 45px;
     }
 }
 

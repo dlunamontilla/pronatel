@@ -31,6 +31,8 @@
   <!-- Estilos -->
   <link rel="stylesheet" href="vista/css/style.css" />
 
+  <!-- Plugins -->
+  <script src="app/js/plugins/splide.min.js"></script>
 </head>
 
 <body>
@@ -57,16 +59,26 @@
             <form action="#" class="search__form" method="GET">
               <div class="search__text">
                 <input type="text" name="q" id="q" placeholder="Buscar...">
-                <button type="submit" class="[ button button--primary ] search__button"></button>
+                <button type="submit" class="[ button button--primary ] search__button"
+                  data-svg="multimedia/icons/buscar.svg"></button>
               </div>
             </form>
           </div>
 
           <div class="navigation__separator"></div>
 
-          <a href="#" class="button button--primary">Acceder</a>
+          <a href="#" class="button button--primary">
+            <span>Acceder</span>
+            <span data-svg="multimedia/icons/salir.svg"></span>
+          </a>
         </div>
       </nav>
+
+      <div class="banner">
+        <div class="splide" id="imagen-splide">
+
+        </div>
+      </div>
     </div>
   </main>
 

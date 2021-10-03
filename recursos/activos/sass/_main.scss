@@ -62,6 +62,17 @@
     }
 
     &__enlace {
+        color: inherit;
+        transition: 300ms ease;
+
+        font: {
+            weight: 600;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+
         &:not(:first-of-type) {
             padding-left: 10px;
 
